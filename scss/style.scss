@@ -109,8 +109,10 @@ body {
     }
 }
 .compare-btn {
-    justify-content: flex-end;
-    padding: 9px 18px 9px 18px;
+    justify-content: flex-end; 
+    button {
+        padding: 10px 18px;
+    }
 }
 
 //-----cards block
