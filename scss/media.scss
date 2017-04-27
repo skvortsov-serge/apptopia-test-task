@@ -35,18 +35,22 @@
 
 /* Extra Small Devices, Phones */
 
-@media only screen and (max-width: 480px) {}
-
-
-/* Custom, iPhone Retina */
-
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 480px) {
+    body .wrapper {
+        padding: 20px;
+    }
     .cards .card {
         padding: 15px;
         .text-56 {
             font-size: 46px;
         }
     }
+}
+
+
+/* Custom, iPhone Retina */
+
+@media only screen and (max-width: 370px) {
     .download-history .dwl-info ul li {
         padding: 14px 3px;
     }

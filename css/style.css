@@ -4511,14 +4511,20 @@ a.badge:focus, a.badge:hover {
 }
 
 /* Extra Small Devices, Phones */
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 480px) {
+  body .wrapper {
+    padding: 20px;
+  }
   .cards .card {
     padding: 15px;
   }
   .cards .card .text-56 {
     font-size: 46px;
   }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 370px) {
   .download-history .dwl-info ul li {
     padding: 14px 3px;
   }
@@ -8209,14 +8215,20 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 }
 
 /* Extra Small Devices, Phones */
-/* Custom, iPhone Retina */
-@media only screen and (max-width: 370px) {
+@media only screen and (max-width: 480px) {
+  body .wrapper {
+    padding: 20px;
+  }
   .cards .card {
     padding: 15px;
   }
   .cards .card .text-56 {
     font-size: 46px;
   }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 370px) {
   .download-history .dwl-info ul li {
     padding: 14px 3px;
   }
@@ -8238,12 +8250,18 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-style: normal;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Lato', sans-serif;
 }
 
 .wrapper {
-  margin: 30px;
+  max-width: 1081px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 .text-green {
@@ -8260,6 +8278,10 @@ body {
 
 .text-56 {
   font-size: 56px;
+}
+
+.width-100 {
+  width: 100%;
 }
 
 .info {
@@ -8344,13 +8366,7 @@ body {
   padding: 10px 18px;
 }
 
-.cards {
-  flex-wrap: wrap;
-}
-
 .card {
-  flex-grow: 1;
-  align-content: space-between;
   max-width: 690px;
   min-width: 270px;
   min-height: 185px;
@@ -8377,6 +8393,10 @@ body {
   margin-right: 6px;
 }
 
+.percent span {
+  margin-top: -17px;
+}
+
 .hicon-arrow-up:before {
   content: "\e906";
   font-style: normal;
@@ -8385,6 +8405,10 @@ body {
 .hicon-arrow-down:before {
   content: "\e907";
   font-style: normal;
+}
+
+.country {
+  margin-top: 13px;
 }
 
 .country span {
@@ -8416,10 +8440,12 @@ body {
 
 .download-history {
   flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 25px;
 }
 
 .graph {
-  flex-grow: 20;
+  flex-grow: 1;
   height: 235px;
   margin-right: 20px;
   background: url("../img/graph.svg") center center no-repeat;
@@ -8427,7 +8453,8 @@ body {
 }
 
 .dwl-info {
-  flex-grow: 1;
+  flex-grow: 0;
+  min-width: 270px;
 }
 
 .dwl-info ul {

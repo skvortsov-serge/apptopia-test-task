@@ -12,12 +12,18 @@ $border: solid 1px #e1e5eb;
     font-style: normal;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Lato', sans-serif;
 }
 
 .wrapper {
-    margin: 30px;
+    max-width: 1081px;
+    margin: 0 auto;
+    padding: 30px;
 }
 
 .text-green {
@@ -34,6 +40,9 @@ body {
 
 .text-56 {
     font-size: 56px;
+}
+.width-100 {
+    width: 100%;
 }
 
 //---- info block-------
@@ -116,13 +125,9 @@ body {
 }
 
 //-----cards block
-.cards {
-    flex-wrap: wrap;
-}
+
 
 .card {
-    flex-grow: 1;
-    align-content: space-between;
     max-width: 690px;
     min-width: 270px;
     min-height: 185px;
@@ -144,6 +149,9 @@ body {
             margin-right: 6px;
         }
     }
+    span {
+        margin-top: -17px;
+    }
 }
 
 .hicon-arrow-up {
@@ -161,6 +169,7 @@ body {
 }
 
 .country {
+    margin-top: 13px;
     span {
         color: $btn-color;
     }
@@ -191,10 +200,12 @@ body {
 }
 .download-history {
     flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 25px;
 }
 
 .graph {
-    flex-grow: 20;
+    flex-grow: 1;
     height: 235px;
     margin-right: 20px;
     background: url('../img/graph.svg') center center no-repeat;
@@ -202,7 +213,8 @@ body {
 }
 
 .dwl-info {
-    flex-grow: 1;
+    flex-grow: 0;
+    min-width: 270px;
     ul {
         list-style: none;
         padding: 0;
