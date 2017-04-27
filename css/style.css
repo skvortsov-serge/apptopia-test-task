@@ -8261,7 +8261,8 @@ body {
 .wrapper {
   max-width: 1081px;
   margin: 0 auto;
-  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .text-green {
@@ -8372,8 +8373,8 @@ body {
   min-height: 185px;
   padding: 30px;
   border: solid 1px #e1e5eb;
-  margin-right: 20px;
   margin-bottom: 20px;
+  box-shadow: 0 2px 6px 0 rgba(85, 95, 119, 0.1);
 }
 
 .card:last-child {
