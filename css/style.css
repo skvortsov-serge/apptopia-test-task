@@ -4494,13 +4494,13 @@ a.badge:focus, a.badge:hover {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 740px) {
-  .compare-btn button {
-    margin-top: 10px;
-  }
   .download-history .graph,
   .download-history .dwl-info {
     flex-grow: inherit;
     width: 100%;
+  }
+  .download-history .graph {
+    margin-right: 0;
   }
 }
 
@@ -8198,13 +8198,13 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /* Medium Devices, Desktops */
 /* Small Devices, Tablets */
 @media only screen and (max-width: 740px) {
-  .compare-btn button {
-    margin-top: 10px;
-  }
   .download-history .graph,
   .download-history .dwl-info {
     flex-grow: inherit;
     width: 100%;
+  }
+  .download-history .graph {
+    margin-right: 0;
   }
 }
 
@@ -8250,12 +8250,31 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Lato-Regular';
+  src: url("../fonts/Lato-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato-Light';
+  src: url("../fonts/Lato-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato-Regular', sans-serif;
+}
+
+button {
+  cursor: pointer;
+  color: #555f77;
 }
 
 .wrapper {
@@ -8279,10 +8298,16 @@ body {
 
 .text-56 {
   font-size: 56px;
+  font-family: 'Lato-Light';
 }
 
 .width-100 {
   width: 100%;
+}
+
+.custom-padding {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .info {
@@ -8291,8 +8316,13 @@ body {
   margin-bottom: 30px;
 }
 
+.main-color {
+  color: #555f77;
+}
+
 .download-info {
   flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .download-info h2 {
@@ -8300,7 +8330,6 @@ body {
   font-family: 'Hermicons', sans-serif;
   margin-right: 20px;
   font-size: 42px;
-  color: #555f77;
 }
 
 .icon-section {
@@ -8348,7 +8377,6 @@ body {
 
 .action-btn button {
   transition: all 0.2s ease-in-out;
-  color: #555f77;
   border-radius: 4px;
   border: solid 1px #ced2db;
   background-color: transparent;
@@ -8361,6 +8389,7 @@ body {
 
 .compare-btn {
   justify-content: flex-end;
+  margin-left: 5px;
 }
 
 .compare-btn button {
@@ -8368,9 +8397,7 @@ body {
 }
 
 .card {
-  max-width: 690px;
   min-width: 270px;
-  min-height: 185px;
   padding: 30px;
   border: solid 1px #e1e5eb;
   margin-bottom: 20px;
@@ -8413,11 +8440,13 @@ body {
 }
 
 .country span {
-  color: #555f77;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .flag-icon {
-  width: 60px;
+  min-width: 60px;
   height: 40px;
   margin-right: 15px;
 }
@@ -8435,7 +8464,6 @@ body {
 }
 
 .dwl-heading {
-  color: #555f77;
   margin-bottom: 20px;
 }
 
@@ -8490,10 +8518,6 @@ body {
   content: " / mo";
   color: #848ea1;
   font-size: 14px;
-}
-
-.unlock-btn {
-  justify-content: center;
 }
 
 .unlock-btn button {

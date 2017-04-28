@@ -15,14 +15,15 @@
 
 @media only screen and (max-width: 768px) {}
 
+
 @media only screen and (max-width: 740px) {
-    .compare-btn button {
-        margin-top: 10px;
-    }
     .download-history .graph,
     .download-history .dwl-info {
         flex-grow: inherit;
         width: 100%;
+    }
+    .download-history .graph {
+        margin-right: 0;
     }
 }
 
